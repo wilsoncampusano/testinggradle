@@ -16,3 +16,6 @@ setupDatabaseTest {
         System.properties['load.data'] == 'true'
     }
 }
+
+
+apply plugin : 'java'
