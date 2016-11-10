@@ -13,6 +13,6 @@ setupDatabaseTest {
     }
 
     onlyIf {
-        System.properties['load.data'] == true
+        System.properties['load.data'] == 'true'
     }
 }
