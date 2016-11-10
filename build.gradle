@@ -3,6 +3,8 @@ task setupDatabaseTest <<{
 }
 
 
-setupDatabaseTest.doFirst {
-    println 'create schema'
+setupDatabaseTest {
+    doFirst {
+        println 'create schema'
+    }
 }
