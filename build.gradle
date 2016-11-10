@@ -1,10 +1,14 @@
-task hello << {
-    println  'Hello'
+task hello
+
+
+
+hello << {
+
+    print 'Hello'
 }
 
 
-task world(dependsOn: hello) <<{
-    println 'world'
-}
 
-apply plugin: 'java'
+hello <<{
+    println 'World'
+}
