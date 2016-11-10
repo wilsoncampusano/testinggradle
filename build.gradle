@@ -1,9 +1,8 @@
-task createSchema {
-    println 'Create Schema'
+task setupDatabaseTest <<{
+    println 'load test data'
 }
 
-task loadTestData(dependsOn: createSchema)
 
-loadTestData << {
-    println 'Load Test Data'
+setupDatabaseTest.doFirst {
+    println 'create schema'
 }
