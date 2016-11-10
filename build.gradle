@@ -1,5 +1,5 @@
 task hello << {
-    println 'hello, '
+    println  'Hello'
 }
 
 
