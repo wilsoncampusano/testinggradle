@@ -3,5 +3,5 @@ task createSchema {
 }
 
 task loadTestData {
-    dependsOn createSchema
+    dependsOn << createSchema
 }
