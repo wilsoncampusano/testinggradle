@@ -1,14 +1,14 @@
-task hello
+task initializeDatabase
 
+initializeDatabase <<{
+    println 'Connecting to database'
+}
 
-
-hello << {
-
-    print 'Hello'
+initializeDatabase << {
+    println 'Updating schema'
 }
 
 
-
-hello <<{
-    println 'World'
+initializeDatabase {
+    println 'Configuring database connection'
 }
