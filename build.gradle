@@ -2,8 +2,7 @@ task createSchema {
     println 'Create Schema'
 }
 
-task loadTestData
-loadTestData.dependsOn createSchema
+task loadTestData(dependsOn: createSchema)
 
 loadTestData << {
     println 'Load Test Data'
