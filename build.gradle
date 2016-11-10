@@ -1,10 +1,7 @@
-task hello << {
-    println 'hello, '
+task createSchema {
+    println 'Create Schema'
 }
 
-
-task world(dependsOn: hello) <<{
-    println 'world'
+task loadTestData {
+    dependsOn createSchema
 }
-
-apply plugin: 'java'
