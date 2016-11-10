@@ -11,4 +11,8 @@ setupDatabaseTest {
     doLast{
         println 'release connection'
     }
+
+    onlyIf {
+        System.properties['load.data'] == true
+    }
 }
