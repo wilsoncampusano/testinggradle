@@ -7,4 +7,8 @@ setupDatabaseTest {
     doFirst {
         println 'create schema'
     }
+
+    doLast{
+        println 'release connection'
+    }
 }
