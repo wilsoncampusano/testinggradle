@@ -1,0 +1,21 @@
+task setupDatabaseTest <<{
+    println 'load test data'
+}
+
+
+setupDatabaseTest {
+    doFirst {
+        println 'create schema'
+    }
+
+    doLast{
+        println 'release connection'
+    }
+
+    onlyIf {
+        System.properties['load.data'] == 'true'
+    }
+}
+
+
+apply plugin : 'java'
